@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p tmp/webjar/META-INF/resources/webjars/thesett-laf
+cp -R app/* tmp/webjar/META-INF/resources/webjars/thesett-laf/
+jar -cf dist/thesett-laf.jar -C tmp/webjar .                        

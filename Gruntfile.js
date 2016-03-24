@@ -11,6 +11,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-exec');
     
     grunt.initConfig({
         'pkg': grunt.file.readJSON('package.json'),
@@ -104,12 +105,18 @@ module.exports = function (grunt) {
                     archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.zip'
                 },
                 files: [{
-                    src: [ 'app/**', 'server.js' ],
+                    src: [ 'app/**' ],
                     dest: '/'
                 }]
             }
         },
 
+        'exec': {
+            'webjar': {
+                command: './make-webjar'
+            }
+        },
+        
         'connect': {
             server: {
                 options: {
@@ -147,5 +154,5 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
     grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
     grunt.registerTask('build', [ 'bower', 'html2js', 'compass', 'copy', 'concat', 'responsive_images' ]);
-    grunt.registerTask('package', [ 'build', 'uglify', 'compress' ]);
+    grunt.registerTask('package', [ 'build', 'uglify', 'compress', 'exec:webjar' ]);
 };
