@@ -1,0 +1,40 @@
+
+.homepage-header-bar {
+  height: baseline-nearest(84px);
+  min-width: 320px;
+  overflow: hidden;
+  padding: baseline-nearest(20px) 20px;
+  position: relative;
+
+  @include media-tablet {
+    height: baseline-nearest(98px);
+  }
+
+  .mygovscot-logo {
+    margin-top: (rhythm(2) + 1);
+    width: 128px;
+
+    @include media-tablet {
+      width: 190px;
+      margin-top: (rhythm(2) + 2);
+    }
+  }
+
+  a.crown-logo {
+    height: baseline-nearest(40px);
+    margin-top: 0px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+
+    @include media-tablet {
+      height: 58px;
+      right: 10px;
+      top: 4px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}

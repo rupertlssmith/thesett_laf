@@ -1,0 +1,19 @@
+#sensitive-content {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  right: 0;
+  z-index: 1;
+
+  a {
+    border-top: 1px solid $color__white;
+    margin-bottom: 0;
+  }
+}
+
+@include media-desktop {
+  #sensitive-content {
+    position: static;
+  }
+}

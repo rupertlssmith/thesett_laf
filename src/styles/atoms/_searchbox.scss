@@ -1,0 +1,159 @@
+.searchbox {
+  font-size: 15px;
+  height: 42px;
+  margin: 35px 0 49px;
+  position: relative;
+
+  input[type=text] {
+    background: #f0f0f0;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    float: right;
+    height: 42px;
+    padding: 0 49px 0 1.5em;
+    width: 100%;
+
+    -webkit-appearance: none;
+
+    &:focus {
+      background: $color__blue--lightest;
+      outline: none;
+    }
+  }
+
+  button {
+    border-radius: 30px;
+    font-size: 17px;
+    height: 42px;
+    margin: 0;
+    outline: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 42px;
+    z-index: 3;
+  }
+}
+
+// for header search
+.header-bar .searchbox{
+  height: auto;
+  left: 15px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 15px;
+
+  @include transition(background-color, 0.1s);
+
+  input[type=text] {
+    font-size: 16px;
+    height: 35px;
+    padding: 0;
+    width: 0;
+
+    @include transition(width 0.1s);
+  }
+
+  button {
+    font-size: 15px;
+    height: 35px;
+    width: 35px;
+  }
+
+  // used for header search on smaller screen sizes
+  &.expanded {
+    background: white;
+    z-index: 2;
+
+    input[type=text] {
+      position: relative;
+      padding: 0 42px 0 25px;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+}
+
+@include media-tablet {
+  .searchbox {
+    font-size: 14px;
+    height: 49px;
+    top: 0;
+
+    input[type=text] {
+      height: 49px;
+      padding-right: 56px;
+    }
+
+    button {
+      font-size: 22px;
+      height: 49px;
+      width: 49px;
+    }
+  }
+
+  .header-bar .searchbox {
+    input[type=text] {
+      font-size: $tablet-milli-size;
+      height: 42px;
+    }
+
+    &.expanded {
+      background: transparent;
+
+      input[type=text] {
+        padding-right: 49px;
+        width: 50%;
+      }
+    }
+
+    button {
+      font-size: 17px;
+      height: 42px;
+      width: 42px;
+    }
+  }
+}
+
+@include media-desktop {
+  .searchbox {
+    font-size: 16px;
+  }
+
+  .header-bar .searchbox {
+    input[type=text] {
+      height: 49px;
+      padding: 0 56px 0 25px;
+      width: 284px;
+    }
+
+    &.expanded {
+      input[type=text] {
+        width: 284px;
+      }
+    }
+
+    button {
+      font-size: 22px;
+      height: 49px;
+      width: 49px;
+    }
+  }
+}
+
+@include media-hd {
+  .header-bar .searchbox {
+    input[type=text] {
+      width: 350px;
+    }
+
+    &.expanded {
+      input[type=text] {
+        width: 352px;
+      }
+    }
+  }
+}
+

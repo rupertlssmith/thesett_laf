@@ -1,0 +1,56 @@
+#feedbackForm {
+    margin-top: 35px;
+    border-top: 1px solid #ddd;
+    padding-top: 28px;
+    @media screen and (min-width: 992px) {
+        margin-top: 84px;
+    }
+}
+.accordian {
+    #feedbackForm {
+        border-top: 0px;
+    }
+}
+#feedbackForm>form>p {
+    margin-bottom: 7px;
+}
+#feedbackForm radio {
+    display: inline;
+    margin-right: 21px;
+}
+#feedbackForm label {
+    display: inline;
+    margin-right: 35px;
+    padding-left: 10px;
+}
+
+#feedbackForm .form-group {
+  margin-bottom: 28px;
+}
+
+#feedbackForm>.thanks p {
+    -webkit-animation: yellow-fade 2s ease-in 1;
+    animation: yellow-fade 2s ease-in 1;
+    padding: 28px;
+}
+#feedbackForm {
+    .submit {
+        margin-bottom: 28px;
+    }
+}
+@-webkit-keyframes yellow-fade {
+    0% {
+        background: #FFFBA2;
+    }
+    100% {
+        background: none;
+    }
+}
+@keyframes yellow-fade {
+    0% {
+        background: #FFFBA2;
+    }
+    100% {
+        background: none;
+    }
+}

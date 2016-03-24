@@ -1,0 +1,204 @@
+.notification {
+
+
+  p {
+    margin: rhythm(1) 0 0;
+    padding-right: 40px;
+  }
+
+  a {
+    color: $notification__foreground--normal;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    background: $notification__background--normal;
+    border-bottom: 1px solid $color__white;
+    color: $notification__foreground--normal;
+    padding: 8px 15px 12px;
+  }
+
+  .close-notification {
+    background: url(../images/icons/notification_close_white.png);
+    height: 27px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    text-indent: 100%;
+    top: 14px;
+    width: 27px;
+
+    @include transition(opacity 1s);
+
+    @include image-retina('../images/icons/notification_close_white.png', 27px, 27px);
+
+    &:hover,
+    &:active {
+      opacity: 0.5;
+
+      @include transition(opacity 0.2s);
+    }
+  }
+
+  &.strong {
+
+    .container {
+      background: $notification__background--strong;
+      color: $notification__foreground--strong;
+    }
+
+    a {
+      color: $notification__foreground--strong;
+    }
+
+    .close-notification {
+      background: url(../images/icons/notification_close_grey.png);
+
+      @include image-retina('../images/icons/notification_close_grey.png', 27px, 27px);
+    }
+  }
+}
+
+.two-part-notification {
+
+  .notification-title {
+    h2 {
+      float: left;
+      font-size: $mobile-h3-size;
+      margin: 0 20px 0 0;
+      text-transform: uppercase;
+    }
+
+    .show-notification {
+      cursor: pointer;
+      float: right;
+      font-size: $mobile-milli-size;
+      margin: 7px 0 0 15px;
+
+      &:active {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .notification-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    clear: both;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+
+    .close-notification {
+      background: url(../images/icons/notification_close_white.png);
+      right: 0;
+      top: 11px;
+    }
+  }
+}
+
+#staging-notice .container {
+  background: $color__green--base;
+
+  .notification-title {
+    h2 {
+      $iconWidth: 25px;
+      $iconSpacing: 10px;
+
+      padding-left: $iconWidth + $iconSpacing;
+      position: relative;
+
+      &:before {
+        background: url(../images/icons/fact_check_tick_25px.png) no-repeat 0 0 transparent;
+
+        @include image-retina('../images/icons/fact_check_tick_25px.png', 25px, 25px);
+
+        content: '';
+        display: inline-block;
+        height: $iconWidth;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: $iconWidth;
+      }
+    }
+  }
+}
+
+body.has-sticky-notice {
+  padding-top: 50px;
+
+  .sticky-notice {
+    left: 0;
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+    right: 0;
+    top: 0;
+    z-index: 5000;
+  }
+}
+
+@include media-tablet {
+  .two-part-notification {
+    .notification-title {
+      float: left;
+    }
+
+    .notification-body {
+      border-top: 0;
+      clear: none;
+      font-size: 14px;
+      line-height: 18px;
+      min-height: 38px;
+      padding-top: 2px;
+
+      .close-notification {
+        display: none;
+        top: 6px;
+      }
+    }
+  }
+
+  #staging-notice .container .notification-title h2 {
+    $iconWidth: 30px;
+    $iconSpacing: 10px;
+
+    padding-left: $iconWidth + $iconSpacing;
+
+    &:before {
+      height: $iconWidth;
+      width: $iconWidth;
+
+      background: url(../images/icons/fact_check_tick_30px.png) no-repeat 0 0 transparent;
+      top: 2px;
+
+      @include image-retina('../images/icons/fact_check_tick_30px.png', 30px, 30px);
+    }
+  }
+
+  body.has-sticky-notice {
+    .sticky-notice {
+      left: 50%;
+      margin-left: -375px;
+      right: auto;
+    }
+  }
+}
+
+@include media-desktop {
+  body.has-sticky-notice {
+    .sticky-notice {
+      margin-left: -485px;
+    }
+  }
+}
+
+@include media-hd {
+  body.has-sticky-notice {
+    .sticky-notice {
+      margin-left: -585px;
+    }
+  }
+}

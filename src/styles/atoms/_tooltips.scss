@@ -1,0 +1,124 @@
+%tooltip-arrow-shape {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.mgs-tooltip {
+  border-bottom: 1px dashed $color__text;
+  cursor: help;
+  display: inline-block;
+  line-height: 17px;
+  position: relative;
+
+  &:focus,
+  &.active {
+    border-bottom-style: solid;
+
+    .mgs-tooltip__container {
+      opacity: 1;
+      filter: none;
+      z-index: 9999;
+
+      @include transform(translate3d(0, 0, 0) rotate3d(0, 0, 0, 0));
+    }
+  }
+}
+
+.mgs-tooltip__container {
+  $mgs-tooltip__width: 320px;
+  bottom: 150%;
+  cursor: default;
+  left: 50%;
+  margin: 0 0 0 ($mgs-tooltip__width * -0.5);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  width: $mgs-tooltip__width;
+  z-index: -1;
+
+  @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out, z-index 1s);
+  @include transform(translate3d(0, -10px, 0));
+}
+
+.mgs-tooltip__content {
+  background: $color__blue--lighter;
+  border: 1px solid $color__grey--base;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  font-size: 17px;
+  line-height: 21px;
+  padding: 12px 40px 12px 20px;
+  position: relative;
+}
+
+.mgs-tooltip__arrow {
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  margin: 0 10px 0 -10px;
+
+  &:after {
+    @extend %tooltip-arrow-shape;
+    border-top-color: $color__blue--lighter;
+    top: -1px;
+  }
+
+  &:before {
+    @extend %tooltip-arrow-shape;
+    border-top-color: darken($color__grey--base, 10%);
+  }
+}
+
+.mgs-tooltip__close {
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+
+@include media-tablet {
+  .mgs-tooltip__content {
+    line-height: 28px;
+  }
+
+  .mgs-tooltip__container {
+    $mgs-tooltip__width--tablet: 360px; // 6 columns
+
+    margin-left: $mgs-tooltip__width--tablet * -0.5;
+    width: $mgs-tooltip__width--tablet;
+  }
+}
+
+@include media-desktop {
+  .mgs-tooltip__content {
+    line-height: 28px;
+  }
+
+  .mgs-tooltip__container {
+    $mgs-tooltip__width--desktop: 293px; // 4 columns
+
+    margin-left: $mgs-tooltip__width--desktop * -0.5;
+    width: $mgs-tooltip__width--desktop;
+  }
+}
+
+@include media-hd {
+  .mgs-tooltip__content {
+    line-height: 28px;
+  }
+
+  .mgs-tooltip__container {
+    $mgs-tooltip__width--desktop: 360px; // 4 columns
+
+    margin-left: $mgs-tooltip__width--desktop * -0.5;
+    width: $mgs-tooltip__width--desktop;
+  }
+}

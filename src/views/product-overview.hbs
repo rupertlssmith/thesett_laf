@@ -1,0 +1,13 @@
+{{> subsite-header }}
+
+<div class="container content-area">
+  <div class="row">
+    {{#each products}}
+    {{> product this }}
+    {{/each}}
+  </div>
+
+  {{#each features}}
+  {{> feature this }}
+  {{/each}}
+</div>

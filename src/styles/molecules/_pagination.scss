@@ -1,0 +1,34 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+
+  > li {
+
+    > a,
+    > span {
+      color: $color__link--primary;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $color__link--primary;
+      color: $color__white;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: #767676;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/*
+ Debugging outlines. These draw coloured boxes around different document elements making it easier to see their
+ positioning on the screen. Comment/uncomment this section to turn debugging off/on.
+*/
+div { border: 1px dotted blue }
+table { border: 1px dotted grey }
+td { border: 1px dotted grey }
+th { border: 1px dotted grey }
+span { border: 1px dotted red }
+object { border: 1px dotted red }
+li { border: 1px dotted green }
+canvas { border: 1px solid red }
+
+/* Styles for the debug section. */
+div#debug { }
+div#debug th { text-align: left; padding: 8px }

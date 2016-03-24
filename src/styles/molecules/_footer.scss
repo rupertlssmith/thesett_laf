@@ -1,0 +1,118 @@
+#site-footer {
+  background: $color__background--dark;
+  color: $color__white;
+  padding-bottom: 14px;
+
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  > .container {
+    position: relative;
+  }
+
+  a {
+    color: $color__white;
+  }
+
+  .footer-links {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @include trailing-border(1px);
+    padding: rhythm(3) 0;
+
+    li {
+      display: inline;
+      padding: 0 1em;
+
+      a {
+        font-weight: $bold;
+        white-space: nowrap;
+        font-size: $mobile-micro-size;
+      }
+    }
+  }
+
+  .scot-gov-footer-logo {
+    width: 60px;
+    float: right;
+  }
+
+  .footer-summary {
+    font-size: 14px;
+  }
+}
+
+.footer-survey-container {
+  bottom: 100%;
+  left: 15px;
+  position: absolute;
+  right: 15px;
+
+
+  .footer-survey {
+    height: 70px;
+
+    a {
+      background: $color__background--blue;
+      color: $color__white;
+      display: block;
+      height: 70px;
+      padding: 0 1em;
+      text-decoration: none;
+
+      .survey-title {
+        line-height: 42px;
+        font-size: 26px;
+        font-weight: 700;
+        padding:0;
+        display:block;
+        margin: 0;
+
+        .glyphicon {
+          float: right;
+          line-height: 42px;
+        }
+      }
+
+      p {
+        font-size: 0.8em;
+      }
+
+      &:hover h2 {
+        text-decoration: underline;
+      }
+    }
+
+    &:before {
+      border-width: 0 0 70px 16px;
+      border-style: solid;
+      border-color: $color__blue--dark transparent;
+      bottom: 0;
+      content: '';
+      left: -1px;
+      position: absolute;
+    }
+  }
+}
+
+@include media-tablet {
+  #site-footer {
+    .footer-links {
+      li {
+        a {
+          white-space: normal;
+        }
+      }
+    }
+
+    .scot-gov-footer-logo {
+      width: 96px;
+    }
+
+    .footer-summary {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

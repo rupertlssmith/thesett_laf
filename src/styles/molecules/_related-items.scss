@@ -1,0 +1,24 @@
+.related-items {
+  background-color: $color__background--white;
+  margin: 49px 0 21px;
+
+  .title {
+    @include adjust-font-size-to(1.4em, 5);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      line-height: 28px;
+      margin-bottom: 7px;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include media-tablet {
+  margin-top: 0;
+}

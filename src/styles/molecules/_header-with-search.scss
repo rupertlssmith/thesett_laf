@@ -1,0 +1,162 @@
+//.header-bar {
+//  height: baseline-nearest(84px);
+//  min-width: 320px;
+//  overflow: hidden;
+//  padding: baseline-nearest(20px) 20px;
+//  position: relative;
+//
+//  @include media-tablet {
+//    height: baseline-nearest(98px);
+//  }
+//
+//  .mygovscot-logo {
+//    margin-top: (rhythm(2) + 1);
+//    width: 128px;
+//
+//    @include media-tablet {
+//      width: 190px;
+//      margin-top: (rhythm(2) + 2);
+//    }
+//  }
+//
+//  a.crown-logo {
+//    border-right: 1px solid #ddd;
+//    height: baseline-nearest(40px);
+//    padding-right: 10px;
+//    position: absolute;
+//    right: 60px;
+//    top: 0;
+//
+//    @include media-tablet {
+//      height: baseline-nearest(48px);
+//      right: 60px;
+//      top: rhythm(1);
+//    }
+//
+//    @include media-desktop {
+//      margin-top: 0;
+//      right: 312px;
+//    }
+//    @include media-hd {
+//      right: 376px;
+//    }
+//    img {
+//      height: 100%;
+//    }
+//  }
+//  @include media-desktop {
+//    a.crown-logo {
+//      border-right: 0;
+//    }
+//  }
+//
+//}
+//
+//.header-searchbox {
+//  background-color: #F0F0F0;
+//  -moz-border-radius: 30px;
+//  -webkit-border-radius: 30px;
+//  border-radius: 30px;
+//  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+//  height: baseline-nearest(40px);
+//  margin-top: 0;
+//  position: absolute;
+//  right: 0;
+//  top: 0;
+//  -webkit-transition: width 0.1s ease-in-out;
+//  -moz-transition: width 0.1s ease-in-out;
+//  -o-transition: width 0.1s ease-in-out;
+//  transition: width 0.1s ease-in-out;
+//  width: 0%;
+//
+//  @include adjust-font-size-to(1.5em);
+//
+//  @include media-tablet {
+//    height: baseline-nearest(48px);
+//    top: rhythm(1);
+//    width: baseline-nearest(48px);
+//  }
+//
+//  @include media-desktop {
+//    width: 312px;
+//  }
+//  @include media-hd {
+//    width: 362px;
+//  }
+//  &.expanded {
+//    width: 98%;
+//
+//    @include media-tablet {
+//      width: 362px;
+//    }
+//    @include media-desktop {
+//      width: 312px;
+//    }
+//    @include media-hd {
+//      width: 362px;
+//    }
+//  }
+//
+//  input.homepage-searchinput {
+//    -webkit-appearance: none;
+//    background-color: transparent;
+//    border: 0;
+//    border-radius: 20px;
+//    -moz-border-radius: 20px;
+//    -webkit-border-radius: 20px;
+//    outline: none;
+//
+//    @include adjust-font-size-to(0.8em);
+//    height: baseline-nearest(40px);
+//    margin-left: 10px;
+//    padding-right: 40px;
+//    position: absolute;
+//    width: 100%;
+//    z-index: 1;
+//
+//    @include media-tablet {
+//      @include adjust-font-size-to(19px);
+//      height: baseline-nearest(48px);
+//      padding-right: 64px;
+//    }
+//  }
+//
+//  button {
+//    height: baseline-nearest(40px);
+//    padding: 4px;
+//    margin: 0;
+//    min-width: 0;
+//    width: baseline-nearest(40px);
+//
+//    @include adjust-font-size-to(24px, 5);
+//    background-color: $color__background--blue;
+//    border-radius: 50%;
+//    color: $color__white;
+//    cursor: pointer;
+//    position: absolute;
+//    right: 0;
+//    text-align: center;
+//    top: 0;
+//    z-index: 10;
+//
+//    @include media-tablet {
+//      @include adjust-font-size-to(26px, 5);
+//      height: baseline-nearest(48px);
+//      padding: 8px;
+//      width: baseline-nearest(48px);
+//    }
+//
+//    &:focus {
+//      outline: 0;
+//    }
+//
+//    &:hover {
+//      background-color: #002754;
+//    }
+//  }
+//}
+//
+//.header-seperator {
+//  background-color: #ddd;
+//  height: 1px;
+//}

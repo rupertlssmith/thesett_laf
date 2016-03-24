@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    $CONTENT-ITEMS
+\*------------------------------------*/
+/**
+ * content items styling
+ */
+
+.content-item {
+    list-style: none;
+    margin-bottom: rhythm(4);
+    @include media-desktop {
+        &.nth-child-2 {
+            clear: left;
+        }
+    }
+    @include media-hd {
+        &.nth-child-2 {
+            clear: none;
+        }
+        &.nth-child-3 {
+            clear: left;
+        }
+    }
+    .content-item-title {
+        text-decoration: none;
+        margin: 1px 0 6px;
+        @include media-tablet {
+            margin: 2px 0 (rhythm(1) - 2);
+        }
+        .content-item-link {
+            text-decoration: none;
+        }
+    }
+    .content-item-summary {
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
+    .content-item-publishDate {
+        @include adjust-font-size-to(0.8em, 4);
+        color: $color__grey--darkest;
+        margin-top: 0;
+    }
+    .content-item-category {
+        color: $color__grey--dark;
+        @include adjust-font-size-to(0.77778em, 4);
+        padding: 0;
+        margin-left: 0;
+        margin-top: rhythm(1);
+        margin-bottom: rhythm(5);
+        list-style: none;
+        background-color: transparent;
+        border-radius: 0;
+        li {
+            display: inline-block;
+            span.divider {
+                padding: 0 5px;
+                display: inline-block;
+            }
+        }
+    }
+}

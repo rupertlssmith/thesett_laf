@@ -1,0 +1,339 @@
+.funding-list__title {
+  margin-bottom: 34px;
+}
+
+.funding-controls {
+  position: static;
+  z-index: 101;
+}
+
+.funding-filters {
+  background: $color__blue--lightest;
+  margin: 0 -15px 21px;
+  overflow: visible;
+  padding: 21px 15px;
+  position: relative;
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &--search {
+      border-bottom: 1px solid $color__white;
+      clear: both;
+      margin-bottom: 21px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+  }
+
+  &__legend {
+    display: none;
+  }
+
+  &__input {
+    &--search-term[type=text] { // this attribute selector is needed for specificity
+      height: 56px;
+      padding: 15px 53px 15px 15px;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.funding-search {
+  border-bottom: 1px solid #ffffff;
+  clear: both;
+  margin-bottom: 21px;
+  padding-bottom: 20px;
+  position: relative;
+
+  .funding-search__button {
+    background: url() no-repeat center center transparent;
+    border: 0;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-indent: 100%;
+    top: 0;
+    width: 56px;
+
+    &--submit[type=submit] {
+      background-image: url(../images/icons/search.png);
+      background-position: 0 0;
+
+      @include transition(none);
+      @include image-retina('../images/icons/search.png', 56px, 168px);
+
+      &:hover,
+      &:focus {
+        background-position: 0 -56px;
+        @include transition(none);
+        outline: none;
+      }
+
+      &:active {
+        background-position: 0 -112px;
+        outline: none;
+      }
+    }
+
+    &--clear[type=button] {
+      background-image: url(../images/icons/icon_close.png);
+      @include image-retina('../images/icons/icon_close.png', 56px, 56px);
+    }
+  }
+}
+
+.funding-buttons {
+  overflow: visible;
+  position: absolute;
+  right: 15px;
+  top: 21px;
+
+  .funding-buttons__clear-filters{
+    margin: 0;
+
+    float: right;
+    font-size: 12px;
+    height: 35px;
+    line-height: 14px;
+    margin: -7px 0 0 0;
+    min-height: 0;
+    min-width: 63px;
+    padding: 0 8px;
+    width: 63px;
+  }
+
+
+
+  &__show-filters {
+    height: 42px;
+    line-height: 42px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    width: auto;
+  }
+}
+
+.funding-filter {
+  &__label {
+    clear: both;
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 7px;
+  }
+
+  &__select {
+    background: $color__background--white;
+    float: right;
+    height: 35px;
+    margin-bottom: 21px;
+    padding-right: 0;
+    width: 50%;
+  }
+}
+
+.checkbox-container {
+  border: 1px solid $color__white;
+  border-width: 1px 0;
+  clear: both;
+  margin: 20px 0 35px 0;
+  padding: 7px 37px 9px;
+  position: relative;
+
+  &--no-top {
+    border-top: 0;
+    margin-top: -6px;
+  }
+
+  .checkbox-container__input { // this attribute selector is needed for specificity
+    display: inline-block;
+    height: 22px;
+    left: 0;
+    margin: 0 10px 0 0;
+    position: absolute;
+    top: 10px;
+    width: 22px;
+
+    &:before {
+      background: url(../images/icons/checkbox.png) no-repeat 0 0 transparent;
+      content: '';
+      display: block;
+      height: 22px;
+      width: 22px;
+
+      @include image-retina('../images/icons/checkbox.png', 22px, 44px);
+    }
+
+    &:checked:before {
+      background-position: 0 -22px;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  &__label {
+    clear: none;
+    display: inline-block;
+    float: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-right: 21px;
+  }
+
+  &__show-note {
+    background: url(../images/icons/info.png) no-repeat center transparent;
+    display: inline-block;
+    float: right;
+    height: 22px;
+    top: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: 100%;
+    width: 22px;
+
+    @include image-retina('../images/icons/info.png', 22px, 22px);
+
+    &:hover,
+    &:focus {
+      background-image: url(../images/icons/info_hover.png);
+
+      @include image-retina('../images/icons/info_hover.png', 22px, 22px);
+    }
+
+    &:active {
+      background-image: url(../images/icons/info_active.png);
+
+      @include image-retina('../images/icons/info_active.png', 22px, 22px);
+    }
+  }
+
+  &__note {
+    clear: both;
+    display: block;
+    font-size: 12px;
+    max-height: 0;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+
+    @include transition(all 0.2s);
+
+    &--open {
+      display: block;
+      max-height: 200px;
+      margin: 14px 0;
+    }
+  }
+}
+
+.filter-actions {
+  clear: both;
+
+  bottom: 0;
+  background: $color__blue--lightest;
+  left: 0;
+  padding: 15px;
+  position: static;
+  right: 0;
+  z-index: 1;
+
+  &--sticky {
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &:before {
+    bottom: 100%;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -5px;
+
+    @include background-image(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.15)));
+  }
+
+  .filter-actions__apply,
+  .filter-actions__cancel {
+    height: 49px;
+    margin: 0;
+    width: 49%;
+  }
+
+  .filter-actions__apply {
+    float: right;
+  }
+
+  .filter-actions__cancel {
+    float: left;
+  }
+}
+
+@include media-tablet {
+
+  .funding-controls {
+    position: relative;
+  }
+
+  .funding-search {
+    border: 0;
+    margin-bottom: 21px;
+    padding: 0;
+  }
+
+  .funding-filters {
+    margin: 0;
+
+    &__title {
+      margin-bottom: 14px;
+    }
+  }
+
+
+ .funding-filter {
+   &__label {
+     font-size: $tablet-milli-size;
+     margin: 3px 0 4px 0;
+   }
+
+   &__select {
+     float: none;
+     margin-bottom: 14px;
+     width: 100%;
+   }
+ }
+
+ .checkbox-container {
+   &__note {
+     font-size: 14px;
+     line-height: 19px;
+   }
+
+   &__label {
+     font-size: 14px;
+   }
+ }
+}
+
+@media screen and (max-height: 900px) {
+  .funding-controls {
+    top: 0 !important;
+  }
+}
+
