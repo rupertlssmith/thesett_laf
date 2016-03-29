@@ -51,7 +51,8 @@ module.exports = function (grunt) {
             'dist': {
                 files: [
                     //{expand: true, cwd: 'src/styles', src: ['**'], dest: 'app/styles'},
-                    //{expand: true, cwd: 'src/js', src: ['**'], dest: 'app/js'},
+                    {expand: true, cwd: 'libs', src: ['**'], dest: 'app/libs'},                    
+                    {expand: true, cwd: 'src/js', src: ['**'], dest: 'app/js'},
                     {expand: true, cwd: 'src/views', src: ['**'], dest: 'app/views'},
                     {expand: true, cwd: 'src', src: ['index.html'], dest: 'app'}
                 ],
