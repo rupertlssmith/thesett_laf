@@ -1,5 +1,7 @@
 #!/bin/sh
+VERSION=`cat current_version`
+echo $VERSION
 
 mkdir -p tmp/webjar/META-INF/resources/webjars/thesett-laf
 cp -R app/* tmp/webjar/META-INF/resources/webjars/thesett-laf/
-jar -cf dist/thesett-laf.jar -C tmp/webjar .                        
+jar -cf dist/thesett-laf-$VERSION.jar -C tmp/webjar .                        
