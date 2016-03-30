@@ -5,3 +5,5 @@ echo $VERSION
 mkdir -p tmp/webjar/META-INF/resources/webjars/thesett-laf
 cp -R app/* tmp/webjar/META-INF/resources/webjars/thesett-laf/
 jar -cf dist/thesett-laf-$VERSION.jar -C tmp/webjar .                        
+mvn install:install-file -Dfile=dist/thesett-laf-$VERSION.jar -DgroupId=com.thesett.laf -DartifactId=thesett-laf -Dversion=$VERSION -Dpackaging=jar
+
