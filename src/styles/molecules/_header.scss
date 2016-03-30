@@ -11,7 +11,7 @@
   }
 
   #thesett-logo {
-    background: url(../images/thesett/thesettlogo.png) no-repeat 0 0 transparent;
+    background: url(../images/thesett/thesettlogo-small.png) no-repeat 0 0 transparent;
     display: block;
     height: 28px;
     margin-top: 5px;
@@ -20,7 +20,7 @@
     width: 130px;
 
     @include media-2x {
-      background-image: url(../images/thesett/thesettlogo.2x.png);
+      background-image: url(../images/thesett/thesettlogo-small.2x.png);
       background-size: 100%;
     }
   }
@@ -43,13 +43,13 @@
     padding-top: 14px;
 
     #thesett-logo {
-      background-image: url(../images/thesett/thesettlogo.medium.png);
+      background-image: url(../images/thesett/thesettlogo-medium.png);
       height: 35px;
       margin-top: 7px;
       width: 163px;
 
       @include media-2x {
-        background-image: url(../images/thesett/thesettlogo.medium.2x.png);
+        background-image: url(../images/thesett/thesettlogo-medium.2x.png);
         background-size: 100%;
       }
     }
@@ -67,13 +67,13 @@
     padding-top: 20px;
 
     #thesett-logo {
-      background-image: url(../images/thesett/thesettlogo.large.png);
+      background-image: url(../images/thesett/thesettlogo-large.png);
       height: 42px;
       margin-top: 10px;
       width: 220px;
 
       @include media-2x {
-        background-image: url(../images/thesett/thesettlogo.large.2x.png);
+        background-image: url(../images/thesett/thesettlogo-large.2x.png);
         background-size: 100%;
       }
     }
