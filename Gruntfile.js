@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -12,7 +12,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-exec');
-    
+    grunt.loadNpmTasks('grunt-express-server');
+
     grunt.initConfig({
         'pkg': grunt.file.readJSON('package.json'),
 
@@ -26,39 +27,56 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         'jshint': {
             'beforeconcat': ['src/js/**/*.js'],
         },
 
         'html2js': {
             dist: {
-                src: [ 'src/views/*.html' ],
+                src: ['src/views/*.html'],
                 dest: 'tmp/templates.js'
             }
         },
 
         'compass': {
-			dist: {
-				options: {
-					sassDir: 'src/styles',
-					cssDir: 'app/styles'
-				}
-			}
-		},
+            dist: {
+                options: {
+                    sassDir: 'src/styles',
+                    cssDir: 'app/styles'
+                }
+            }
+        },
 
         'copy': {
             'dist': {
                 files: [
                     //{expand: true, cwd: 'src/styles', src: ['**'], dest: 'app/styles'},
-                    {expand: true, cwd: 'libs', src: ['**'], dest: 'app/libs'},                    
-                    {expand: true, cwd: 'src/js', src: ['**'], dest: 'app/js'},
-                    {expand: true, cwd: 'src/views', src: ['**'], dest: 'app/views'},
-                    {expand: true, cwd: 'src', src: ['index.html'], dest: 'app'}
+                    {
+                        expand: true,
+                        cwd: 'libs',
+                        src: ['**'],
+                        dest: 'app/libs'
+                    }, {
+                        expand: true,
+                        cwd: 'src/js',
+                        src: ['**'],
+                        dest: 'app/js'
+                    }, {
+                        expand: true,
+                        cwd: 'src/views',
+                        src: ['**'],
+                        dest: 'app/views'
+                    }, {
+                        expand: true,
+                        cwd: 'src',
+                        src: ['index.html'],
+                        dest: 'app'
+                    }
                 ],
             }
         },
-        
+
         'concat': {
             options: {
                 separator: ';'
@@ -73,7 +91,7 @@ module.exports = function (grunt) {
         'uglify': {
             'options': {
                 'mangle': false
-            },  
+            },
             'dist': {
                 'files': {
                     'app/<%= pkg.name %>.min.js': ['app/<%= pkg.name %>.js']
@@ -85,18 +103,35 @@ module.exports = function (grunt) {
             'dist': {
                 options: {
                     engine: 'im',
-                    sizes: [
-                        { width: '100%', name: 'large', suffix: '.x2' },
-                        { width: '66%', name: 'medium', suffix: '.x2' },
-                        { width: '44%', name: 'small', suffix: '.x2' },
-                        { width: '50%', name: 'large' },
-                        { width: '33%', name: 'medium' },
-                        { width: '22%', name: 'small' }
-                    ]
+                    sizes: [{
+                        width: '100%',
+                        name: 'large',
+                        suffix: '.x2'
+                    }, {
+                        width: '66%',
+                        name: 'medium',
+                        suffix: '.x2'
+                    }, {
+                        width: '44%',
+                        name: 'small',
+                        suffix: '.x2'
+                    }, {
+                        width: '50%',
+                        name: 'large'
+                    }, {
+                        width: '33%',
+                        name: 'medium'
+                    }, {
+                        width: '22%',
+                        name: 'small'
+                    }]
                 },
-                files: [
-                    {expand: true, cwd: 'src/images', src: ['**/*.{jpg,gif,png}'], dest: 'app/images'}
-                ]
+                files: [{
+                    expand: true,
+                    cwd: 'src/images',
+                    src: ['**/*.{jpg,gif,png}'],
+                    dest: 'app/images'
+                }]
             }
         },
 
@@ -106,7 +141,7 @@ module.exports = function (grunt) {
                     archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.zip'
                 },
                 files: [{
-                    src: [ 'app/**' ],
+                    src: ['app/**'],
                     dest: '/'
                 }]
             }
@@ -117,7 +152,7 @@ module.exports = function (grunt) {
                 command: './make-webjar'
             }
         },
-        
+
         'connect': {
             server: {
                 options: {
@@ -127,18 +162,26 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
+        'express': {
+            dev: {
+                options: {
+                    script: 'server.js'
+                }
+            }
+        },
+
         'watch': {
             'dev': {
-                files: [ 'Gruntfile.js', 'src/**' ],
-                tasks: [ 'build' ],
+                files: ['Gruntfile.js', 'src/**'],
+                tasks: ['build'],
                 options: {
                     atBegin: true
                 }
             },
             'min': {
-                files: [ 'Gruntfile.js', 'src/**' ],
-                tasks: [ 'package' ],
+                files: ['Gruntfile.js', 'src/**'],
+                tasks: ['package'],
                 options: {
                     atBegin: true
                 }
@@ -147,13 +190,13 @@ module.exports = function (grunt) {
 
         'clean': {
             temp: {
-                src: [ 'tmp', 'app', 'dist' ]
+                src: ['tmp', 'app', 'dist']
             }
         },
     });
 
-    grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
-    grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
-    grunt.registerTask('build', [ 'bower', 'html2js', 'compass', 'copy', 'concat', 'responsive_images' ]);
-    grunt.registerTask('package', [ 'build', 'uglify', 'compress', 'exec:webjar' ]);
+    grunt.registerTask('dev', ['bower', 'express:dev', 'watch:dev']);
+    grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
+    grunt.registerTask('build', ['bower', 'html2js', 'compass', 'copy', 'concat', 'responsive_images']);
+    grunt.registerTask('package', ['build', 'uglify', 'compress', 'exec:webjar']);
 };
