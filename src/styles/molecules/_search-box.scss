@@ -1,0 +1,12 @@
+.thesett-search-box {
+    margin-left: 16px;
+    margin-right: 16px;
+    order: 2;
+}
+.thesett-search-box .mdl-textfield__input {
+    color: rgba(0,0,0,0.87);
+}
+.thesett-search-box.is-focused + .thesett-navigation-container {
+    opacity: 0;
+    width: 100px;
+}

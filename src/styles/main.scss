@@ -1,188 +1,75 @@
-body {
-    margin: 0;
+/* ==========================================================================
+   ATOMIC DESIGN WITH SASS
+   ========================================================================== */
+/**
+ * This is the control panel where all of the quarks, atoms and molecules are imported.
+ */
+/* SASS Libraries
+========================================================================== */
+/*
+ * Global SASS libraries/helpers from Compass's built in mixins to aid
+ * compatibility and progressive enhancement methods.
+ */
+@import "compass";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/css3";
+/* Utilities
+========================================================================== */
+/*
+ * Global classes, mixins and styles that can be used anywhere and at any time.
+ */
+@import "utilities/responsive-values";
+@import "utilities/mixins";
+@import "utilities/reset";
+@import "utilities/normalize";
+@import "utilities/clearfix";
+@import "utilities/font-stack";
+@import "utilities/defaults";
+@import "utilities/responsive-values";
+@import "utilities/base-spacing";
+@import "utilities/colors";
+/* Quarks
+========================================================================== */
+/*
+ * Styles reserved for default HTML elements only. Default paragraphs, links, lists and micros. Style
+ * guide stuff.
+ */
+@import "quarks/headings";
+@import "quarks/links";
+/* Atoms
+========================================================================== */
+/*
+ * CSS objects that can be extended from and into other elements of the site. Think of these as
+ * the default relationships that can be used again and again without bloating the codebase.
+ */
+@import "atoms/grids";
+@import "atoms/flag";
+@import "atoms/aside";
+@import "atoms/nav";
+@import "atoms/body";
+.thesett-more-button {
+    order: 3;
 }
-a img {
-    border: 0;
-}
-::-moz-selection {
-    background-color: #6ab344;
-    color: #fff;
-}
-::selection {
-    background-color: #6ab344;
-    color: #fff;
-}
-.mdl-textfield--expandable {
-    width: auto;
-}
-.logo-font {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    line-height: 1;
-    color: #767777;
-    font-weight: 500;
-}
-.thesett-card-container .mdl-card__actions {
-    bottom: 0;
-    position: absolute;
-}
-.thesett-card-container .mdl-card__actions a {
-    border-top: none;
-    font-size: 16px;
-}
-.thesett-card-container .mdl-card__media {
-    background: transparent;
-    overflow: hidden;
-}
-.thesett-card-container .mdl-card__media img {
-    width: 100%;
-}
-.thesett-card-container .mdl-card__supporting-text {
-    color: black;
-    height: auto;
-    padding-bottom: 56px;
-}
-.thesett-card-container .mdl-card__title {
-    background: transparent;
-    height: auto;
-}
-.thesett-card-container .mdl-card__title-text {
-    color: black;
-    height: auto;
-}
-.thesett-drawer {
-    border-right: none;
-}
-.thesett-drawer .mdl-layout-title {
-    background: #6ab344;
-    height: 160px;
-    position: relative;
-}
-.thesett-drawer .mdl-navigation__link.mdl-navigation__link {
-    color: #757575;
-    font-size: 14px;
-}
-.thesett-drawer .thesett-logo-image {
-    bottom: 16px;
-    position: absolute;
-}
-.thesett-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
-}
-.thesett-drawer-separator {
-    background-color: #dcdcdc;
-    height: 1px;
-    margin: 8px 0;
-}
-.thesett-footer {
-    background-color: #fafafa;
-    position: relative;
-}
-.thesett-footer .mdl-mega-footer--bottom-section {
-    position: relative;
-}
-.thesett-footer .mdl-mega-footer--bottom-section a {
-    margin-right: 2em;
-}
-.thesett-footer .mdl-mega-footer--middle-section::after {
-    border-bottom: none;
-}
-.thesett-footer .mdl-mega-footer--right-section a .material-icons {
-    position: relative;
-    top: 6px;
-}
-.thesett-footer .mdl-mega-footer--top-section::after {
-    border-bottom: none;
-}
-.thesett-footer a:hover {
-    color: #8bc34a;
-}
-.thesett-header {
-    background-color: white;
-    overflow: visible;
-}
-.thesett-header .material-icons {
-    color: #767777!important;
-}
-.thesett-header .mdl-layout__drawer-button {
-    background: transparent;
-    color: #767777;
-}
-.thesett-header .mdl-menu__container {
-    margin: 0 !important;
-    z-index: 50;
-}
-.thesett-header .mdl-navigation__link {
-    color: #757575;
-    font-size: 14px;
-    font-weight: 700;
-}
-.thesett-link {
-    color: #8bc34a!important;
-    text-decoration: none;
-}
-.thesett-link .material-icons {
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-}
-.thesett-link-menu:hover {
-    cursor: pointer;
-}
-.thesett-link:hover {
-    color: #7cb342!important;
-}
+/* Molecules
+========================================================================== */
+/*
+ * Sometimes we need one-off structures, such as a banner or navigation element or footer, that we
+ * dont intend to replicate. This is where we can combine multiple quarks and atoms, without
+ * interfering with any of our global styles.
+ */
+@import "molecules/card-container";
+@import "molecules/header";
+@import "molecules/footer";
+@import "molecules/drawer";
+@import "molecules/nav-bar";
+@import "molecules/search-box";
 .thesett-logo-image {
     height: 28px;
     width: 140px;
 }
 .thesett-mobile-title {
     display: none!important;
-}
-.thesett-more-button {
-    order: 3;
-}
-.thesett-more-section {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1044px;
-    padding: 80px 0;
-}
-.thesett-more-section .thesett-section-title {
-    margin-left: 12px;
-    padding-bottom: 24px;
-}
-.thesett-navigation {
-    direction: ltr;
-    justify-content: flex-end;
-    width: 800px;
-}
-.thesett-navigation .mdl-navigation__link {
-    background-color: transparent!important;
-    border-bottom: 4px solid transparent;
-    display: inline-block;
-    height: 60px;
-    line-height: 68px;
-}
-.thesett-navigation .mdl-navigation__link:hover {
-    border-bottom: 4px solid #8bc34a;
-}
-.thesett-navigation-container {
-    direction: rtl;
-    order: 1;
-    transition: opacity 0.2s cubic-bezier(0.4,0,0.2,1), width 0.2s cubic-bezier(0.4,0,0.2,1);
-    width: 500px;
-}
-.thesett-search-box {
-    margin-left: 16px;
-    margin-right: 16px;
-    order: 2;
-}
-.thesett-search-box .mdl-textfield__input {
-    color: rgba(0,0,0,0.87);
-}
-.thesett-search-box.is-focused + .thesett-navigation-container {
-    opacity: 0;
-    width: 100px;
 }
 /**** Mobile layout ****/
 @media (max-width: 900px) {
@@ -191,6 +78,12 @@ a img {
     }
     .thesett-title {
         display: none !important;
+    }
+    .thesett-more-button {
+        display: none;
+    }
+    .thesett-footer .mdl-mega-footer--bottom-section {
+        display: none;
     }
     .thesett-mobile-title {
         display: block !important;
@@ -206,16 +99,10 @@ a img {
     .thesett.thesett-search-box.is-focused ~ .thesett-mobile-title {
         opacity: 0;
     }
-    .thesett-more-button {
-        display: none;
-    }
     .thesett-search-box.is-focused {
         width: calc(100% - 48px);
     }
     .thesett-search-box .mdl-textfield__expandable-holder {
         width: 100%;
-    }
-    .thesett-footer .mdl-mega-footer--bottom-section {
-        display: none;
     }
 }

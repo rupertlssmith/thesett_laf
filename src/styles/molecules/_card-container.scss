@@ -1,0 +1,28 @@
+.thesett-card-container .mdl-card__actions {
+    bottom: 0;
+    position: absolute;
+}
+.thesett-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+}
+.thesett-card-container .mdl-card__media {
+    background: transparent;
+    overflow: hidden;
+}
+.thesett-card-container .mdl-card__media img {
+    width: 100%;
+}
+.thesett-card-container .mdl-card__supporting-text {
+    color: black;
+    height: auto;
+    padding-bottom: 56px;
+}
+.thesett-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+}
+.thesett-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+}

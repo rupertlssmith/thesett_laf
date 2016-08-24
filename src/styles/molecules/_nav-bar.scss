@@ -1,0 +1,21 @@
+.thesett-navigation {
+    direction: ltr;
+    justify-content: flex-end;
+    width: 800px;
+}
+.thesett-navigation .mdl-navigation__link {
+    background-color: transparent!important;
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+}
+.thesett-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid #8bc34a;
+}
+.thesett-navigation-container {
+    direction: rtl;
+    order: 1;
+    transition: opacity 0.2s cubic-bezier(0.4,0,0.2,1), width 0.2s cubic-bezier(0.4,0,0.2,1);
+    width: 500px;
+}
