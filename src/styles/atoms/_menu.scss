@@ -1,3 +1,8 @@
 .thesett-more-button {
     order: 3;
 }
+@media (max-width: 900px) {
+    .thesett-more-button {
+        display: none;
+    }
+}

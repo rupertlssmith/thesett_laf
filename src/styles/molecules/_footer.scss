@@ -21,3 +21,8 @@
 .thesett-footer a:hover {
     color: #8bc34a;
 }
+@media (max-width: 900px) {
+    .thesett-footer .mdl-mega-footer--bottom-section {
+        display: none;
+    }
+}

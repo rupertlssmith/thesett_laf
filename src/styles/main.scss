@@ -61,39 +61,3 @@
 @import "molecules/drawer";
 @import "molecules/nav-bar";
 @import "molecules/search-box";
-
-/**** Mobile layout ****/
-@media (max-width: 900px) {
-    .thesett-navigation-container {
-        display: none;
-    }
-    .thesett-title {
-        display: none !important;
-    }
-    .thesett-more-button {
-        display: none;
-    }
-    .thesett-footer .mdl-mega-footer--bottom-section {
-        display: none;
-    }
-    .thesett-mobile-title {
-        display: block !important;
-        position: absolute;
-        left: calc(50% - 70px);
-        top: 12px;
-        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
-     consecutive "+" operators in some cases. Therefore, we need to use both
-     here to cover all the bases. */
-    .thesett-search-box.is-focused + .thesett-navigation-container + .thesett-mobile-title,
-    .thesett.thesett-search-box.is-focused ~ .thesett-mobile-title {
-        opacity: 0;
-    }
-    .thesett-search-box.is-focused {
-        width: calc(100% - 48px);
-    }
-    .thesett-search-box .mdl-textfield__expandable-holder {
-        width: 100%;
-    }
-}
