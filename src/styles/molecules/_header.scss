@@ -22,18 +22,21 @@
     font-size: 14px;
     font-weight: 700;
 }
-.thesett-mobile-title {
-    display: none!important;
+.thesett-title {
+    display: none !important;
 }
-@media (max-width: 900px) {
-    .thesett-title {
-        display: none !important;
-    }
+.thesett-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@include media-tablet {
     .thesett-mobile-title {
+        display: none!important;
+    }
+    .thesett-title {
         display: block !important;
-        position: absolute;
-        left: calc(50% - 70px);
-        top: 12px;
-        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }

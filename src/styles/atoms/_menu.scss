@@ -1,8 +1,11 @@
 .thesett-more-button {
-    order: 3;
+    display: none;
 }
-@media (max-width: 900px) {
+@include media-tablet {
     .thesett-more-button {
-        display: none;
+        display: inline;
+    }
+    .thesett-more-button {
+        order: 3;
     }
 }
