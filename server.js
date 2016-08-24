@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var exphbs  = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var path = require('path');
 var app = express();
 
@@ -13,15 +13,17 @@ app.engine('.hbs', exphbs({
     viewsDir: path.join(__dirname, "pattern")
 }));
 
+app.use('/images/', express.static('pattern/images'));
+app.use('/thesett-laf/styles/images/', express.static('pattern/images'));
 app.use('/thesett-laf/', express.static('app'));
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'pattern'));
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.render('pattern.hbs');
 });
 
-app.listen(9072, function () {
+app.listen(9072, function() {
     console.log('express-handlebars example server listening on: 9072');
 });

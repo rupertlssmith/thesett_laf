@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 
         'watch': {
             'dev': {
-                files: ['Gruntfile.js', 'src/**'],
+                files: ['Gruntfile.js', 'src/**', 'server.js'],
                 tasks: ['build'],
                 options: {
                     atBegin: true
