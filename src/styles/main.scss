@@ -48,9 +48,7 @@
 @import "atoms/aside";
 @import "atoms/nav";
 @import "atoms/body";
-.thesett-more-button {
-    order: 3;
-}
+@import "atoms/menu";
 /* Molecules
 ========================================================================== */
 /*
@@ -64,13 +62,7 @@
 @import "molecules/drawer";
 @import "molecules/nav-bar";
 @import "molecules/search-box";
-.thesett-logo-image {
-    height: 28px;
-    width: 140px;
-}
-.thesett-mobile-title {
-    display: none!important;
-}
+
 /**** Mobile layout ****/
 @media (max-width: 900px) {
     .thesett-navigation-container {
