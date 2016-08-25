@@ -1,0 +1,24 @@
+@include media-phone {
+    // .mdl-grid {
+    //     padding: 0 !important;
+    //     max-width: $phone-width;
+    // }
+}
+@include media-tablet {
+     .mdl-grid {
+         padding: 0 !important;
+         max-width: ($tablet-width * 0.8);
+     }
+}
+@include media-desktop {
+    .mdl-grid {
+        padding: 0 !important;
+        max-width: ($desktop-width * 0.8);
+    }
+}
+@include media-hd {
+    .mdl-grid {
+        padding: 0 !important;
+        max-width: ($hd-width * 0.8);
+    }
+}
