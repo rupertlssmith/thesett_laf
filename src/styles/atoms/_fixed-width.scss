@@ -1,24 +1,21 @@
-@include media-phone {
-    // .mdl-grid {
-    //     padding: 0 !important;
-    //     max-width: $phone-width;
-    // }
-}
 @include media-tablet {
-     .mdl-grid {
+     .fixed-width {
          padding: 0 !important;
-         max-width: ($tablet-width * 0.8);
+         margin: 0 auto;
+         max-width: ($tablet-width * 0.85);
      }
 }
 @include media-desktop {
-    .mdl-grid {
+    .fixed-width {
         padding: 0 !important;
-        max-width: ($desktop-width * 0.8);
+        margin: 0 auto;
+        max-width: ($desktop-width * 0.85);
     }
 }
 @include media-hd {
-    .mdl-grid {
+    .fixed-width {
         padding: 0 !important;
-        max-width: ($hd-width * 0.8);
+        margin: 0 auto;
+        max-width: ($hd-width * 0.85);
     }
 }
