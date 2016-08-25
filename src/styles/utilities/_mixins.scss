@@ -100,9 +100,9 @@ Examples:
 */
 
 $phone-width: $screen-xs; // 480
-$tablet-width: $screen-sm; // 768
-$desktop-width: $screen-md; // 992
-$hd-width: $screen-lg; // 1200
+$tablet-width: $screen-sm; // 840
+$desktop-width: $screen-md; // 960
+$hd-width: $screen-lg; // 1280
 
 @mixin media-phone {
   @media (min-width: #{$phone-width}) {
