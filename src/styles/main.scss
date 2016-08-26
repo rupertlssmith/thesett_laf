@@ -44,6 +44,8 @@
  */
 @import "atoms/menu";
 @import "atoms/fixed-width";
+@import "atoms/cards";
+
 /* Molecules
 ========================================================================== */
 /*
@@ -51,7 +53,6 @@
  * dont intend to replicate. This is where we can combine multiple quarks and atoms, without
  * interfering with any of our global styles.
  */
-@import "molecules/card-container";
 @import "molecules/header";
 @import "molecules/footer";
 @import "molecules/drawer";

@@ -1,0 +1,31 @@
+.mdl-card__actions {
+    bottom: 0;
+    position: absolute;
+}
+.mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+}
+.mdl-card__media {
+    background: transparent;
+    overflow: hidden;
+}
+.mdl-card__media img {
+    width: 100%;
+}
+.mdl-card__supporting-text {
+    color: black;
+    height: auto;
+    padding-bottom: 56px;
+}
+.mdl-card__title {
+    background: transparent;
+    height: auto;
+}
+.mdl-card__title-text {
+    color: black;
+    height: auto;
+}
+.mdl-card {
+  border-radius: 4px;
+}
