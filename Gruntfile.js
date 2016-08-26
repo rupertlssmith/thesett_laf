@@ -108,21 +108,21 @@ module.exports = function(grunt) {
                         name: 'large',
                         suffix: '.x2'
                     }, {
-                        width: '66%',
+                        width: '90%',
                         name: 'medium',
                         suffix: '.x2'
                     }, {
-                        width: '44%',
+                        width: '80%',
                         name: 'small',
                         suffix: '.x2'
                     }, {
                         width: '50%',
                         name: 'large'
                     }, {
-                        width: '33%',
+                        width: '45%',
                         name: 'medium'
                     }, {
-                        width: '22%',
+                        width: '40%',
                         name: 'small'
                     }]
                 },
