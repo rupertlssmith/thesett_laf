@@ -11,7 +11,7 @@ h1, h2, h3 {
   text-rendering: optimizeLegibility;
 }
 
-h1, .alpha {
+h1 {
   @include adjust-font-size-to($mobile-h1-size, 5);
   margin: 28px 0 25px;
 
@@ -24,7 +24,7 @@ h1, .alpha {
   }
 }
 
-h2, .beta {
+h2 {
   @include adjust-font-size-to($mobile-h2-size, 4);
   margin: 30px 0 5px;
 
@@ -34,7 +34,7 @@ h2, .beta {
   }
 }
 
-h3, .gamma {
+h3 {
   @include adjust-font-size-to($mobile-h3-size, 3);
   margin: 0 0 rhythm(1, $mobile-h3-size);
 
@@ -45,7 +45,7 @@ h3, .gamma {
   }
 }
 
-h4, .delta {
+h4 {
   @include adjust-font-size-to($mobile-h4-size, 4);
   font-weight: 700;
   margin: 0;
@@ -56,17 +56,11 @@ h4, .delta {
   }
 }
 
-h5, .epsilon {
+h5 {
   @include adjust-font-size-to($mobile-h5-size, 4);
   margin: 0;
 
   @include media-tablet {
     @include adjust-font-size-to($tablet-h5-size, 4);
   }
-}
-
-h2.emphasis {
-  border-top: 7px solid $color__body;
-  display: inline-block;
-  margin: -1px 0 1px 0;
 }
