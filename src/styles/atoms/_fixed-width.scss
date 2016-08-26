@@ -1,9 +1,9 @@
 @include media-tablet {
-     .fixed-width {
-         padding: 0 !important;
-         margin: 0 auto;
-         max-width: ($tablet-width * 0.85);
-     }
+    .fixed-width {
+        padding: 0 !important;
+        margin: 0 auto;
+        max-width: ($tablet-width * 0.85);
+    }
 }
 @include media-desktop {
     .fixed-width {
