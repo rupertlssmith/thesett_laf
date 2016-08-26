@@ -138,19 +138,25 @@
 								<td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
 								<td>25</td>
 								<td>$2.90</td>
-								<td><button class="mdl-button mdl-js-button mdl-button--accent">Edit</button></td>
+								<td>
+									<button class="mdl-button mdl-js-button mdl-button--accent">Edit</button>
+								</td>
 							</tr>
 							<tr>
 								<td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
 								<td>50</td>
 								<td>$1.25</td>
-								<td><button class="mdl-button mdl-js-button mdl-button--accent">Edit</button></td>
+								<td>
+									<button class="mdl-button mdl-js-button mdl-button--accent">Edit</button>
+								</td>
 							</tr>
 							<tr>
 								<td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
 								<td>10</td>
 								<td>$2.35</td>
-								<td><button class="mdl-button mdl-js-button mdl-button--accent">Edit</button></td>
+								<td>
+									<button class="mdl-button mdl-js-button mdl-button--accent">Edit</button>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -180,4 +186,43 @@
 			<button class="mdl-button mdl-js-button mdl-button--primary">Accept</button>
 			<button class="mdl-button mdl-js-button mdl-button--accent">Cancel</button>
 		</div>
+
+		<h2>Dialogs</h2>
+
+		<button id="show-dialog" class="mdl-button mdl-js-button mdl-button--primary">
+			Show Dialog
+		</button>
+		<dialog class="mdl-dialog">
+
+			<h4 class="mdl-dialog__title">Log In</h4>
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield">
+					<input class="mdl-textfield__input" type="text" id="uname" />
+					<label class="mdl-textfield__label" for="sample1">Username</label>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield">
+					<input class="mdl-textfield__input" type="password" id="pass" />
+					<label class="mdl-textfield__label" for="sample2">Password</label>
+				</div>
+				<div class="mdl-card__actions">
+					<button class="mdl-button mdl-js-button mdl-button--primary close">
+						Login
+						<i class="material-icons">chevron_right</i>
+					</button>
+				</div>
+			</form>
+		</dialog>
+		<script>
+			var dialog = document.querySelector('dialog');
+			var showDialogButton = document.querySelector('#show-dialog');
+			if (!dialog.showModal) {
+				dialogPolyfill.registerDialog(dialog);
+			}
+			showDialogButton.addEventListener('click', function() {
+				dialog.showModal();
+			});
+			dialog.querySelector('.close').addEventListener('click', function() {
+				dialog.close();
+			});
+		</script>
 	</div>
