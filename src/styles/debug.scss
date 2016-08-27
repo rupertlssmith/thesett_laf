@@ -2,11 +2,31 @@
  Debugging outlines. These draw coloured boxes around different document elements making it easier to see their
  positioning on the screen. Comment/uncomment this section to turn debugging off/on.
 */
-div { border: 1px dotted blue }
-table { border: 1px dotted grey }
-td { border: 1px dotted grey }
-th { border: 1px dotted grey }
-span { border: 1px dotted red }
-object { border: 1px dotted red }
-li { border: 1px dotted green }
-canvas { border: 1px solid red }
+div {
+    background-position: left top;
+    background-image: linear-gradient(00deg, blue 0px, transparent 1px), linear-gradient(90deg, blue 0px, transparent 1px), linear-gradient(180deg, blue 0px, transparent 1px), linear-gradient(270deg, blue 0px, transparent 1px);
+}
+
+table,
+td,
+th {
+    background-image: linear-gradient(0deg, grey 0px, transparent 1px), linear-gradient(90deg, grey 0px, transparent 1px), linear-gradient(180deg, grey 0px, transparent 1px), linear-gradient(270deg, grey 0px, transparent 1px);
+}
+
+canvas,
+object,
+span {
+    background-image: linear-gradient(0deg, red 0px, transparent 1px), linear-gradient(90deg, red 0px, transparent 1px), linear-gradient(180deg, red 0px, transparent 1px), linear-gradient(270deg, red 0px, transparent 1px);
+}
+
+li {
+    background-image: linear-gradient(0deg, green 0px, transparent 1px), linear-gradient(90deg, green 0px, transparent 1px), linear-gradient(180deg, green 0px, transparent 1px), linear-gradient(270deg, green 0px, transparent 1px);
+}
+
+body {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+  background-position: left -1px;
+  background-repeat: repeat;
+  background-size: 24px 24px;
+}
