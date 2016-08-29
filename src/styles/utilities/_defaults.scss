@@ -7,17 +7,30 @@
  */
 
 $base-font-size: 16px;
-$base-line-height: 7px;
+$base-line-height: 24px;
 $rhythm-unit: "px";
 $default-rhythm-border-width: 1px;
 $from-context: "px";
 
+// Minor third scale.
+$type-scale: (
+  -1: 0.833,
+  0: 1,
+  1: 1.2,
+  2: 1.44,
+  3: 1.728,
+  4: 2.074
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
 $mobile-base-size: 16px;
-$mobile-h1-size: 28px;
-$mobile-h2-size: 21px;
-$mobile-h3-size: $mobile-base-size;
-$mobile-h4-size: $mobile-base-size;
-$mobile-h5-size: $mobile-base-size;
+$mobile-h1-size: $mobile-base-size * type-scale(4);
+$mobile-h2-size: $mobile-base-size * type-scale(3);
+$mobile-h3-size: $mobile-base-size * type-scale(2);
+$mobile-h4-size: $mobile-base-size * type-scale(1);
 $mobile-list-size: $mobile-base-size;
 $mobile-button-size: 17px;
 $mobile-small-button-size: 15px;
@@ -25,11 +38,10 @@ $mobile-milli-size: 14px;
 $mobile-micro-size: 13px;
 
 $tablet-base-size: 19px;
-$tablet-h1-size: 49px;
-$tablet-h2-size: 26px;
-$tablet-h3-size: $tablet-base-size;
-$tablet-h4-size: $tablet-base-size;
-$tablet-h5-size: $tablet-base-size;
+$tablet-h1-size: $tablet-base-size * type-scale(4);
+$tablet-h2-size: $tablet-base-size * type-scale(3);
+$tablet-h3-size: $tablet-base-size * type-scale(2);
+$tablet-h4-size: $tablet-base-size * type-scale(1);
 $tablet-list-size: $tablet-base-size;
 $tablet-button-size: 17px;
 $tablet-small-button-size: 15px;
@@ -41,7 +53,6 @@ $desktop-h1-size: 49px;
 $desktop-h2-size: 26px;
 $desktop-h3-size: $desktop-base-size;
 $desktop-h4-size: $desktop-base-size;
-$desktop-h5-size: $desktop-base-size;
 $desktop-list-size: $desktop-base-size;
 $desktop-button-size: 17px;
 $desktop-small-button-size: 15px;
@@ -49,6 +60,11 @@ $desktop-milli-size: 16px;
 $desktop-micro-size: 14px;
 
 @include establish-baseline;
+
+html {
+  @include adjust-leading-to(4);
+}
+
 
 /**
  * Font-family

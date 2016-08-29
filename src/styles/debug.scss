@@ -1,7 +1,7 @@
-/*
- Debugging outlines. These draw coloured boxes around different document elements making it easier to see their
- positioning on the screen. Comment/uncomment this section to turn debugging off/on.
-*/
+@import "compass/typography";
+@import "utilities/defaults";
+
+h1, h2, h3, h4, p,
 dialog,
 div,
 footer {
@@ -36,5 +36,5 @@ body {
     background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
     background-position: left -1px;
     background-repeat: repeat;
-    background-size: 24px 24px;
+    background-size: rhythm(1) rhythm(1);
 }
