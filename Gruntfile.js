@@ -108,18 +108,18 @@ module.exports = function(grunt) {
                         name: 'large',
                         suffix: '.x2'
                     }, {
-                        width: '90%',
+                        width: '100%',
                         name: 'medium',
                         suffix: '.x2'
                     }, {
-                        width: '80%',
+                        width: '90%',
                         name: 'small',
                         suffix: '.x2'
                     }, {
                         width: '50%',
                         name: 'large'
                     }, {
-                        width: '45%',
+                        width: '50%',
                         name: 'medium'
                     }, {
                         width: '40%',
