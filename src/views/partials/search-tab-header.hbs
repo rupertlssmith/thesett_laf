@@ -1,12 +1,15 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <div class="thesett-header mdl-layout__header mdl-layout__header--waterfall">
+
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
 
             <a id="thesett-logo" href="http://"></a>
 
             <!-- Add spacer, to align navigation to the right in desktop -->
-            <div class="thesett-header-spacer mdl-layout-spacer"></div>
-            <div class="thesett-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-layout-search
+                      mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
                     <i class="material-icons">search</i>
                 </label>
@@ -16,14 +19,12 @@
             </div>
 
             <!-- Navigation -->
-            <div class="thesett-navigation-container">
-                <nav class="thesett-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 1</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 2</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 3</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 4</a>
-                </nav>
-            </div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 1</a>
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 2</a>
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 3</a>
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tab 4</a>
+            </nav>
 
             <button class="thesett-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
                 <i class="material-icons">more_vert</i>
@@ -35,4 +36,4 @@
                 <li disabled class="mdl-menu__item">Menu 3</li>
             </ul>
         </div>
-    </div>
+</div>

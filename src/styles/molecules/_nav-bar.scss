@@ -1,29 +1,32 @@
 .thesett-navigation-container {
     display: none;
+    // height: rhythm(3);
 }
 @include media-tablet {
     .thesett-navigation-container {
         display: inline;
+        // height: rhythm(3);
     }
     .thesett-navigation {
         direction: ltr;
         justify-content: flex-end;
-        width: 800px;
+        //width: 800px;
     }
-    .thesett-navigation .mdl-navigation__link {
+    .mdl-navigation__link {
         background-color: transparent!important;
         border-bottom: 4px solid transparent;
         display: inline-block;
-        height: 60px;
-        line-height: 68px;
+        // line-height: 68px;
+        // height: rhythm(3);
     }
-    .thesett-navigation .mdl-navigation__link:hover {
+    .mdl-navigation__link:hover {
         border-bottom: 4px solid #8bc34a;
     }
     .thesett-navigation-container {
         direction: rtl;
         order: 1;
         transition: opacity 0.2s cubic-bezier(0.4,0,0.2,1), width 0.2s cubic-bezier(0.4,0,0.2,1);
-        width: 500px;
+        //width: 500px;
+        //height: rhythm(3);
     }
 }
