@@ -12,8 +12,9 @@
     color: $color__grey--dark!important;
     font-weight: 550;
     line-height: line-height(1) !important;
-    font-size: type-scale(-1) * $mobile-h4-size !important;
+    font-size: $mobile-milli-size !important;
     @include media-tablet {
-         @include adjust-font-size-to($tablet-milli-size, 1);
+        line-height: line-height(1) !important;
+        font-size: $tablet-milli-size !important;
     }
 }
