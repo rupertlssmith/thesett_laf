@@ -9,3 +9,15 @@
 .mdl-navigation__link:hover {
     border-bottom: 4px solid #8bc34a;
 }
+
+.mdl-navigation__link {
+    color: $color__grey--dark!important;
+    font-weight: 550;
+    line-height: line-height(1) !important;
+    font-size: type-scale(-1) * $mobile-h4-size !important;
+
+    // @include adjust-font-size-to($mobile-milli-size, 1);
+    @include media-tablet {
+         @include adjust-font-size-to($tablet-milli-size, 1);
+    }
+}
