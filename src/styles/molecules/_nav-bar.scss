@@ -1,32 +1,11 @@
-.thesett-navigation-container {
-    display: none;
+.mdl-navigation__link {
+    background-color: transparent!important;
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    // line-height: 68px;
     // height: rhythm(3);
 }
-@include media-tablet {
-    .thesett-navigation-container {
-        display: inline;
-        // height: rhythm(3);
-    }
-    .thesett-navigation {
-        direction: ltr;
-        justify-content: flex-end;
-        //width: 800px;
-    }
-    .mdl-navigation__link {
-        background-color: transparent!important;
-        border-bottom: 4px solid transparent;
-        display: inline-block;
-        // line-height: 68px;
-        // height: rhythm(3);
-    }
-    .mdl-navigation__link:hover {
-        border-bottom: 4px solid #8bc34a;
-    }
-    .thesett-navigation-container {
-        direction: rtl;
-        order: 1;
-        transition: opacity 0.2s cubic-bezier(0.4,0,0.2,1), width 0.2s cubic-bezier(0.4,0,0.2,1);
-        //width: 500px;
-        //height: rhythm(3);
-    }
+
+.mdl-navigation__link:hover {
+    border-bottom: 4px solid #8bc34a;
 }
