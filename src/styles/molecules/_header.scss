@@ -29,6 +29,11 @@
   min-height: rhythm(2);
   height: rhythm(2);
 }
+
+.mdl-layout__header {
+background-color: white;
+}
+
 #thesett-logo {
     background: url("../images/thesett/thesettlogo-small.png") no-repeat 0 0 transparent;
     display: block;
