@@ -4,7 +4,7 @@ $base-line-height: 24px;
 $rhythm-unit: "px";
 $default-rhythm-border-width: 1px;
 $from-context: "px";
-$base-spacing-unit: ($base-line-height - 5);
+$base-spacing-unit: ($base-line-height - 12);
 $half-spacing-unit: $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 $line-height-ratio: $base-line-height / $base-font-size; // Minor third scale.

@@ -1,31 +1,44 @@
 .mdl-card__actions {
-    bottom: 0;
-    position: absolute;
+    margin: 0;
+    height: rhythm(2);
 }
-.mdl-card__actions a {
-    border-top: none;
-    font-size: 16px;
-}
+
+.mdl-card__actions a {}
+
 .mdl-card__media {
     background: transparent;
     overflow: hidden;
 }
+
 .mdl-card__media img {
     width: 100%;
+    height: rhythm(7);
 }
+
 .mdl-card__supporting-text {
     color: black;
-    height: auto;
-    padding-bottom: 56px;
+    margin: 0;
+    padding: 0;
+    @include adjust-font-size-to($mobile-base-size, 1);
+    margin-left: (2 * $base-spacing-unit);
 }
+
 .mdl-card__title {
     background: transparent;
-    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-left: (1 * $base-spacing-unit);
 }
+
 .mdl-card__title-text {
     color: black;
-    height: auto;
+    @include adjust-font-size-to($mobile-h4-size, 2);
 }
+
 .mdl-card {
-  border-radius: 4px;
+    border-radius: 4px;
+}
+
+.mdl-grid {
+    padding-top: 16px;
 }
