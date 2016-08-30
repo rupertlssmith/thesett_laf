@@ -31,10 +31,11 @@ $mobile-h1-size: $mobile-base-size * type-scale(4);
 $mobile-h2-size: $mobile-base-size * type-scale(3);
 $mobile-h3-size: $mobile-base-size * type-scale(2);
 $mobile-h4-size: $mobile-base-size * type-scale(1);
+$mobile-milli-size: 14px;
+
 $mobile-list-size: $mobile-base-size;
 $mobile-button-size: 17px;
 $mobile-small-button-size: 15px;
-$mobile-milli-size: 14px;
 $mobile-micro-size: 13px;
 
 $tablet-base-size: 19px;
@@ -42,10 +43,11 @@ $tablet-h1-size: $tablet-base-size * type-scale(4);
 $tablet-h2-size: $tablet-base-size * type-scale(3);
 $tablet-h3-size: $tablet-base-size * type-scale(2);
 $tablet-h4-size: $tablet-base-size * type-scale(1);
+$tablet-milli-size: 16px;
+
 $tablet-list-size: $tablet-base-size;
 $tablet-button-size: 17px;
 $tablet-small-button-size: 15px;
-$tablet-milli-size: 16px;
 $tablet-micro-size: 14px;
 
 $desktop-base-size: 19px;
@@ -53,10 +55,11 @@ $desktop-h1-size: 49px;
 $desktop-h2-size: 26px;
 $desktop-h3-size: $desktop-base-size;
 $desktop-h4-size: $desktop-base-size;
+$desktop-milli-size: 16px;
+
 $desktop-list-size: $desktop-base-size;
 $desktop-button-size: 17px;
 $desktop-small-button-size: 15px;
-$desktop-milli-size: 16px;
 $desktop-micro-size: 14px;
 
 @include establish-baseline;
