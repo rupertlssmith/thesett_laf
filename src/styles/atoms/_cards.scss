@@ -34,7 +34,7 @@
 }
 
 .mdl-card__title-text {
-    color: black;
+    font-weight: normal;
     @include adjust-font-size-to($mobile-h4-size, 2);
 }
 
