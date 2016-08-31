@@ -23,7 +23,7 @@
     padding: 0;
     @include adjust-font-size-to($mobile-base-size, 1);
     margin-left: (2 * $base-spacing-unit);
-    padding-bottom: rhythm(1);
+    padding-bottom: rhythm(2);
 }
 
 .mdl-card__title {
