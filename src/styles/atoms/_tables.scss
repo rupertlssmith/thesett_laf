@@ -1,0 +1,17 @@
+.mdl-data-table {
+    @include adjust-font-size-to($mobile-base-size, 1);
+}
+
+th {
+  @include adjust-font-size-to($mobile-base-size, 1);
+  padding-top: 0px !important;
+  padding-bottom: 12px !important;
+  height: rhythm(2) !important;
+}
+
+td, tr {
+  @include adjust-font-size-to($mobile-base-size, 1);
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  height: rhythm(2) !important;
+}
