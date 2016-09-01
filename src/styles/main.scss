@@ -61,25 +61,3 @@
 @import "molecules/drawer";
 @import "molecules/nav-bar";
 @import "molecules/search-box";
-
-.table-control {
-  background-color: $color__grey--base;
-  //height: rhythm(2);
-  padding-bottom: rhythm(2);
-  margin-bottom: rhythm(1);
-  //overflow: hidden;
-  position: relative;
-}
-
-.edge-button {
-  position: absolute;
-  //margin-top: - rhythm(2);
-  right: 20px;
-  bottom: -12px;
-}
-
-.mdl-data-table {
-  width: 100%;
-}
-
-.table-control table { margin-bottom: 0px; }
