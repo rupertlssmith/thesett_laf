@@ -1,8 +1,19 @@
+.fixed-width__one-card {
+    padding: 0 !important;
+    margin: 0 auto;
+    max-width: 400px;
+}
 @include media-tablet {
     .fixed-width {
         padding: 0 !important;
         margin: 0 auto;
         max-width: ($tablet-width * 0.85);
+    }
+
+    .fixed-width__one-card {
+        padding: 0 !important;
+        margin: 0 auto;
+        max-width: 400px;
     }
 }
 @include media-desktop {
@@ -11,11 +22,23 @@
         margin: 0 auto;
         max-width: ($desktop-width * 0.85);
     }
+
+    .fixed-width__one-card {
+        padding: 0 !important;
+        margin: 0 auto;
+        max-width: 400px;
+    }
 }
 @include media-hd {
     .fixed-width {
         padding: 0 !important;
         margin: 0 auto;
         max-width: ($hd-width * 0.85);
+    }
+
+    .fixed-width__one-card {
+        padding: 0 !important;
+        margin: 0 auto;
+        max-width: 400px;
     }
 }
