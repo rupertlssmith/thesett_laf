@@ -24,8 +24,8 @@ td .mdl-button {
 }
 
 .data-table__apron {
-    background-color: $color__grey--base;
-    padding-bottom: rhythm(2);
+    background-color: $color__grey--light;
+    padding-bottom: rhythm(3);
     margin-bottom: rhythm(1);
     position: relative;
 }
@@ -37,5 +37,5 @@ td .mdl-button {
 .data-table__fab-button {
     position: absolute;
     right: 20px;
-    bottom: -12px;
+    bottom: 12px;
 }
