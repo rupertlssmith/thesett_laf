@@ -3,14 +3,14 @@
 <div class="mdl-layout__content">
 	<div class="layout-fixed-width">
 		<h2>Forms</h2>
-		<!-- Simple Textfield -->
+
 		<form action="#">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" id="sample1">
 				<label class="mdl-textfield__label" for="sample1">Text...</label>
 			</div>
 		</form>
-		<!-- Numeric Textfield -->
+
 		<form action="#">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
@@ -26,8 +26,15 @@
 			</div>
 		</form>
 
-		<div class="mdl-card__actions">
-			<button class="mdl-button mdl-js-button mdl-button--primary">Accept</button>
-			<button class="mdl-button mdl-js-button mdl-button--accent">Cancel</button>
+		<div class="control-bar">
+			<div class="control-bar__row">
+				<div class="control-bar__left-0">
+					<button class="mdl-button mdl-js-button mdl-button--primary">Accept</button>
+				</div>
+				<div class="control-bar__left-0">
+					<button class="mdl-button mdl-js-button mdl-button--accent">Cancel</button>
+				</div>
+			</div>
 		</div>
+
 	</div>
