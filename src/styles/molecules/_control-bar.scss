@@ -1,0 +1,53 @@
+.grid-container {
+    width: 100%;
+    //max-width: 1200px;
+}
+/*-- our cleafix hack -- */
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='left-'] {
+    float: left;
+    min-height: 1px;
+}
+
+.left-0 {
+    //width: 0%;
+}
+
+.left-1 {
+    width: 16.66%;
+}
+
+.left-2 {
+    width: 33.33%;
+}
+
+.left-3 {
+    width: 50%;
+}
+
+[class*='right-'] {
+    float: right;
+    min-height: 1px;
+}
+
+.right-0 {
+    //width: 0%;
+}
+
+.right-1 {
+    width: 16.66%;
+}
+
+.right-2 {
+    width: 33.33%;
+}
+
+.right-3 {
+    width: 50%;
+}

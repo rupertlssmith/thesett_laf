@@ -60,30 +60,4 @@
 @import "molecules/drawer";
 @import "molecules/nav-bar";
 @import "molecules/search-box";
-
-.button-bar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    align-self: stretch;
-    align-items: center;
-    height: rhythm(2);
-    margin: 0;
-    padding: 0;
-    // & .mdl-navigation {
-    //     margin: 0;
-    //     padding: 0;
-    //     height: $layout-header-desktop-row-height;
-    //     flex-direction: row;
-    //     align-items: center;
-    // }
-    //
-    // & .mdl-navigation__link {
-    //     display: block;
-    //     color: $layout-header-text-color;
-    //     line-height: $layout-header-desktop-row-height;
-    //     padding: 0 24px;
-    // }
-}
+@import "molecules/control-bar";
