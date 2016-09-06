@@ -25,9 +25,13 @@ td .mdl-button {
 
 .data-table__apron {
     background-color: $color__grey--light;
-    padding-bottom: rhythm(3);
+    padding-bottom: rhythm(0.5);
     margin-bottom: rhythm(1);
     position: relative;
+}
+
+.data-table__apron .grid-container {
+  margin-top: rhythm(0.5);
 }
 
 .data-table__apron table {
