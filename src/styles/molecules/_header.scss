@@ -1,8 +1,11 @@
-.mdl-layout__header,
 .mdl-layout__header-row,
 .mdl-navigation {
     min-height: rhythm(2);
     height: rhythm(2);
+}
+
+.mdl-layout__header {
+    min-height: rhythm(2);
 }
 
 .mdl-layout__header {
