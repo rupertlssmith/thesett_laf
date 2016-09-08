@@ -13,9 +13,15 @@
     bottom: 0;
     position: absolute;
     padding-top: 0;
+    width: 100%;
+    padding: 0;
 }
 
 .mdl-dialog__actions a {}
+
+.mdl-dialog__actions .control-bar {
+    background: transparent;
+}
 
 .mdl-dialog__content {
     color: black;
