@@ -1,0 +1,55 @@
+/* Set up the rhythm. */
+/* line 106, ../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 41, ../../src/styles/utilities/_defaults.scss */
+html {
+  line-height: 96px;
+}
+
+/* line 4, ../../src/styles/debug.scss */
+h1, h2, h3, h4, p,
+dialog,
+div, nav,
+footer {
+  background-position: left top;
+  background-image: linear-gradient(0deg, #0000ff 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, #0000ff 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(180deg, #0000ff 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(270deg, #0000ff 0px, rgba(0, 0, 0, 0) 1px);
+}
+
+/* line 12, ../../src/styles/debug.scss */
+table,
+td,
+th {
+  background-image: linear-gradient(0deg, #808080 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, #808080 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(180deg, #808080 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(270deg, #808080 0px, rgba(0, 0, 0, 0) 1px);
+}
+
+/* line 18, ../../src/styles/debug.scss */
+canvas,
+object,
+span {
+  background-image: linear-gradient(0deg, #ff0000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, #ff0000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(180deg, #ff0000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(270deg, #ff0000 0px, rgba(0, 0, 0, 0) 1px);
+}
+
+/* line 24, ../../src/styles/debug.scss */
+li {
+  background-image: linear-gradient(0deg, #008000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, #008000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(180deg, #008000 0px, rgba(0, 0, 0, 0) 1px), linear-gradient(270deg, #008000 0px, rgba(0, 0, 0, 0) 1px);
+}
+
+/* line 28, ../../src/styles/debug.scss */
+div,
+footer,
+header {
+  background-color: transparent !important;
+}
+
+/* line 34, ../../src/styles/debug.scss */
+dialog,
+body {
+  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, rgba(0, 0, 0, 0) 1px);
+  background-position: left -1px;
+  background-repeat: repeat;
+  background-size: 24px 24px;
+}
