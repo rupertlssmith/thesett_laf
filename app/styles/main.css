@@ -597,7 +597,7 @@ table {
  * Default text font-family and font weights
  */
 /* Set up the rhythm. */
-/* line 106, ../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em;
@@ -1256,7 +1256,7 @@ td .mdl-button {
   width: 100%;
   min-height: 48px;
   height: 48px;
-  background-color: #ebebeb;
+  background-color: transparent;
   overflow: visible;
 }
 /* line 8, ../../src/styles/molecules/_control-bar.scss */
