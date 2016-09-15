@@ -1061,7 +1061,8 @@ td .mdl-button {
   background: url("../images/thesett/thesettlogo-small.png") no-repeat 0 0 transparent;
   display: block;
   height: 24px;
-  margin-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 0px;
   overflow: hidden;
   width: 130px;
 }
@@ -1074,16 +1075,17 @@ td .mdl-button {
 }
 
 @media (min-width: 840px) {
-  /* line 28, ../../src/styles/molecules/_header.scss */
+  /* line 29, ../../src/styles/molecules/_header.scss */
   #thesett-logo {
     background-image: url("../images/thesett/thesettlogo-medium.png");
     height: 35px;
-    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-bottom: 0px;
     width: 135px;
   }
 }
 @media (min-width: 840px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 840px) and (min-resolution: 192dppx) {
-  /* line 28, ../../src/styles/molecules/_header.scss */
+  /* line 29, ../../src/styles/molecules/_header.scss */
   #thesett-logo {
     background-image: url("../images/thesett/thesettlogo-medium.2x.png");
     background-size: 100%;
@@ -1091,16 +1093,17 @@ td .mdl-button {
 }
 
 @media (min-width: 960px) {
-  /* line 40, ../../src/styles/molecules/_header.scss */
+  /* line 42, ../../src/styles/molecules/_header.scss */
   #thesett-logo {
     background-image: url("../images/thesett/thesettlogo-large.png");
     height: 35px;
-    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-bottom: 0px;
     width: 135px;
   }
 }
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 960px) and (min-resolution: 192dppx) {
-  /* line 40, ../../src/styles/molecules/_header.scss */
+  /* line 42, ../../src/styles/molecules/_header.scss */
   #thesett-logo {
     background-image: url("../images/thesett/thesettlogo-large.2x.png");
     background-size: 100%;
@@ -1261,7 +1264,7 @@ td .mdl-button {
   width: 100%;
   min-height: 48px;
   height: 48px;
-  background-color: #ebebeb;
+  background-color: transparent;
   overflow: visible;
 }
 /* line 8, ../../src/styles/molecules/_control-bar.scss */
