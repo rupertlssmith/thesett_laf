@@ -899,11 +899,6 @@ h4 {
   border-radius: 2px;
 }
 
-/* line 46, ../../src/styles/atoms/_cards.scss */
-.mdl-grid {
-  padding-top: 16px;
-}
-
 /* line 1, ../../src/styles/atoms/_dialogs.scss */
 .mdl-dialog {
   border-radius: 2px;
