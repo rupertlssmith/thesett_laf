@@ -1065,6 +1065,7 @@ paper-listbox {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #727272;
+  width: 300px;
 }
 
 /* Molecules
