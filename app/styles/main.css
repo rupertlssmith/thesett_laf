@@ -789,6 +789,12 @@ h4 {
   margin-bottom: 0px;
 }
 
+/* line 6, ../../src/styles/atoms/_grid.scss */
+.mdl-grid {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 /* line 1, ../../src/styles/atoms/_fixed-width.scss */
 .layout-fixed-width--one-card {
   padding: 0 !important;
