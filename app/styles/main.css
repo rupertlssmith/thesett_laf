@@ -1056,14 +1056,15 @@ td .mdl-button {
 
 /* line 1, ../../src/styles/atoms/_paper-listbox.scss */
 paper-listbox {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
   border-top-width: 2px;
-  border-top-color: #b3b3b3;
+  border-top-color: #727272;
   border-top-style: solid;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: #b3b3b3;
+  border-bottom-color: #727272;
 }
 
 /* Molecules
