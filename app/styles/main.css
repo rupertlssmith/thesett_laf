@@ -1054,6 +1054,12 @@ td .mdl-button {
   color: #000000;
 }
 
+/* line 1, ../../src/styles/atoms/_paper-listbox.scss */
+paper-listbox {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 /* Molecules
 ========================================================================== */
 /*
