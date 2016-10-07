@@ -783,6 +783,12 @@ h4 {
  * CSS objects that can be extended from and into other elements of the site. Think of these as
  * the default relationships that can be used again and again without bloating the codebase.
  */
+/* line 1, ../../src/styles/atoms/_grid.scss */
+.mdl-cell {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* line 1, ../../src/styles/atoms/_fixed-width.scss */
 .layout-fixed-width--one-card {
   padding: 0 !important;
