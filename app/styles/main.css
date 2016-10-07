@@ -1058,9 +1058,11 @@ td .mdl-button {
 paper-listbox {
   padding-top: 12px;
   padding-bottom: 12px;
-  border-top: 2px;
+  border-top-width: 2px;
   border-top-color: #b3b3b3;
-  border-bottom: 2px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
   border-bottom-color: #b3b3b3;
 }
 
