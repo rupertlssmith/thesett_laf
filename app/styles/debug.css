@@ -41,11 +41,12 @@ li {
 /* line 28, ../../src/styles/debug.scss */
 div,
 footer,
-header {
+header,
+paper-listbox {
   background-color: transparent !important;
 }
 
-/* line 34, ../../src/styles/debug.scss */
+/* line 35, ../../src/styles/debug.scss */
 dialog,
 body {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, rgba(0, 0, 0, 0) 1px);
