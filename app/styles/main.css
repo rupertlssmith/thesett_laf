@@ -795,6 +795,12 @@ h4 {
   padding-bottom: 0px;
 }
 
+/* line 1, ../../src/styles/atoms/_layout.scss */
+.layout-spacer {
+  height: 24px;
+  min-height: 24px;
+}
+
 /* line 1, ../../src/styles/atoms/_fixed-width.scss */
 .layout-fixed-width--one-card {
   padding: 0 !important;
