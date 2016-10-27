@@ -1032,6 +1032,16 @@ td .mdl-button {
   bottom: 12px;
 }
 
+/* line 47, ../../src/styles/atoms/_tables.scss */
+.data-table__active-row {
+  background-color: #ffffff;
+}
+
+/* line 51, ../../src/styles/atoms/_tables.scss */
+.data-table__inactive-row {
+  background-color: #ebebeb;
+}
+
 /* line 1, ../../src/styles/atoms/_buttons.scss */
 .mdl-button {
   line-height: 24px;

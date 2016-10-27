@@ -43,3 +43,11 @@ td .mdl-button {
     right: 20px;
     bottom: 12px;
 }
+
+.data-table__active-row {
+    background-color: $color__white;
+}
+
+.data-table__inactive-row {
+    background-color: $color__grey--light;
+}
