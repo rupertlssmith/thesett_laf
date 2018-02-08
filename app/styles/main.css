@@ -90,10 +90,7 @@ Examples:
  */
 /* line 8, ../../src/styles/utilities/_reset.scss */
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
+  /*@include vendor(box-sizing, border-box);*/
   -webkit-font-smoothing: antialiased;
 }
 
@@ -624,7 +621,7 @@ table {
  * Default text font-family and font weights
  */
 /* Set up the rhythm. */
-/* line 106, ../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em;

@@ -8,7 +8,7 @@
     &,
     &:after,
     &:before {
-        @include vendor(box-sizing, border-box);
+        /*@include vendor(box-sizing, border-box);*/
         -webkit-font-smoothing: antialiased;
     }
 }
