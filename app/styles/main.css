@@ -90,7 +90,10 @@ Examples:
  */
 /* line 8, ../../src/styles/utilities/_reset.scss */
 *, *:after, *:before {
-  /*@include vendor(box-sizing, border-box);*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1040,6 +1043,11 @@ td .mdl-button {
 }
 
 /* line 1, ../../src/styles/atoms/_buttons.scss */
+a {
+  padding-top: 6px !important;
+}
+
+/* line 5, ../../src/styles/atoms/_buttons.scss */
 .mdl-button {
   line-height: 24px;
   height: 36px;
@@ -1047,7 +1055,7 @@ td .mdl-button {
   margin-top: 6px;
 }
 
-/* line 8, ../../src/styles/atoms/_buttons.scss */
+/* line 12, ../../src/styles/atoms/_buttons.scss */
 .mdl-button--fab {
   width: 48px !important;
   min-width: 48px;
@@ -1056,7 +1064,7 @@ td .mdl-button {
   margin-bottom: 0;
 }
 
-/* line 16, ../../src/styles/atoms/_buttons.scss */
+/* line 20, ../../src/styles/atoms/_buttons.scss */
 .mdl-button--warn {
   color: #d32205;
 }
@@ -1072,6 +1080,11 @@ td .mdl-button {
 /* line 1, ../../src/styles/atoms/_tabs.scss */
 .mdl-layout__tab {
   color: #000000;
+}
+
+/* line 8, ../../src/styles/atoms/_tabs.scss */
+.mdl-layout__tab-bar {
+  width: calc(100% - 56px);
 }
 
 /* line 1, ../../src/styles/atoms/_paper-listbox.scss */
